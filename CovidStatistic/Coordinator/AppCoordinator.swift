@@ -19,6 +19,15 @@ final class AppCoordinator: Coordinator {
         self.window = window
     }
     
+    func childDidFinish(_ child: Coordinator) {
+        for (index,coordinator) in childCoordinators.enumerated() {
+            if coordinator === child {
+                childCoordinators.remove(at: index)
+                break
+            }
+        }
+    }
+    
     func start() {
         window.rootViewController = navigationContoller
         window.makeKeyAndVisible()
@@ -27,5 +36,5 @@ final class AppCoordinator: Coordinator {
         childCoordinators.append(homeCoordinator)
         homeCoordinator.start()
     }
-    
+
 }

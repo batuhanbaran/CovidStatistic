@@ -18,7 +18,17 @@ final class HomeCoordinator: Coordinator {
     
     func start() {
         let homeViewController = HomeViewController(nibName: "HomeViewController", bundle: nil)
+        let viewModel = HomeViewModel()
+        homeViewController.viewModel = viewModel
+        viewModel.coordinator = self
+        homeViewController.title = "Covid Statistic"
+        
         navigationContoller.setViewControllers([homeViewController], animated: false)
     }
     
+    func covidStaticList() {
+        let covidStatisticListCoordinator = CovidStatisticListCoordinator(navigationController: navigationContoller)
+        childCoordinators.append(covidStatisticListCoordinator)
+        covidStatisticListCoordinator.start()
+    }
 }
