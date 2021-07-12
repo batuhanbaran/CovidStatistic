@@ -13,18 +13,19 @@ class CovidStatisticListViewController: UIViewController {
     var viewModel: CovidStatisticListViewModel!
     let tableView = UITableView()
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         fetchCovidStatisticList()
-        configureTableView()
     }
     
     private func configureTableView() {
         self.view.addSubview(tableView)
         
         self.tableView.showsVerticalScrollIndicator = false
-        self.tableView.separatorStyle = .none
+        self.tableView.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         
         self.tableView.translatesAutoresizingMaskIntoConstraints = false
         
@@ -40,9 +41,16 @@ class CovidStatisticListViewController: UIViewController {
     }
     
     private func fetchCovidStatisticList() {
-        viewModel.fetchCovidData {
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
+        self.activityIndicator.startAnimating()
+        
+        viewModel.fetchCovidData { isFinish in
+            if isFinish {
+                DispatchQueue.main.async {
+                    self.activityIndicator.stopAnimating()
+                    self.activityIndicator.hidesWhenStopped = true
+                    self.configureTableView()
+                    self.tableView.reloadData()
+                }
             }
         }
     }

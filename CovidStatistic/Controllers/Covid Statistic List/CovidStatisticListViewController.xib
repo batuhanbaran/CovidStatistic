@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CovidStatisticListViewController" customModule="CovidStatistic" customModuleProvider="target">
             <connections>
+                <outlet property="activityIndicator" destination="Y9m-tz-xYg" id="0kW-cs-GQr"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,8 +19,17 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Y9m-tz-xYg">
+                    <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                </activityIndicatorView>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Y9m-tz-xYg" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="hHp-0d-BXq"/>
+                <constraint firstItem="Y9m-tz-xYg" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="qGb-8R-Jwg"/>
+            </constraints>
             <point key="canvasLocation" x="49" y="90"/>
         </view>
     </objects>

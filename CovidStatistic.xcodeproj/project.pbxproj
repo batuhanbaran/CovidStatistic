@@ -251,8 +251,8 @@
 		D8AE4D2E269B6BBF00B8177B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				D86B7AC5269C7D8F00BB5CA5 /* Covid Statistic List */,
 				D8AE4D2F269B6BD400B8177B /* Home */,
+				D86B7AC5269C7D8F00BB5CA5 /* Covid Statistic List */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";

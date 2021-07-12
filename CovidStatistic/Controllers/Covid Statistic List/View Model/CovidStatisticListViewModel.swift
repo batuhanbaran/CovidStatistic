@@ -10,12 +10,12 @@ import Foundation
 class CovidStatisticListViewModel {
     var result: [CovidResult]?
     
-    func fetchCovidData(completion: @escaping () ->()) {
+    func fetchCovidData(completion: @escaping (Bool) ->()) {
         API.fetch(endPoint: "corona/countriesData/", httpMethod: .get) { (covidData: Result<CovidData,Error>) in
             switch covidData {
             case .success(let covidData):
                 self.result = covidData.result
-                completion()
+                completion(true)
             case .failure(let error):
                 print(error)
             }

@@ -25,8 +25,6 @@ class CovidStatisticListTableViewCell: UITableViewCell {
         super.awakeFromNib()
         
         self.backView.backgroundColor = .white
-        self.backView.layer.cornerRadius = 16
-        self.backView.addShadow(offset: CGSize.init(width: 3, height: 3), color: UIColor.black, radius: 5.0, opacity: 0.55)
     }
     
     func configure(with viewModel: CovidStatisticListViewModel, indexPath: IndexPath) {
