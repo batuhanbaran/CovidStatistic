@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Alamofire
 
 public enum HTTPMethod: String {
     case get = "GET"
@@ -15,29 +16,30 @@ public enum HTTPMethod: String {
 }
 
 class API: NSObject {
-    class func fetch<T: Decodable>(endPoint: String, with params: [String:String] = [:], httpMethod: HTTPMethod, completion: @escaping (Result<T,Error>) -> ()) {
+    class func fetch<T: Decodable>(endPoint: String, completion: @escaping (Result<T, Error>) -> Void) {
         let url = URL(string: APIPaths.baseURL.rawValue + endPoint)!
-        var components = URLComponents(string: "\(url)")!
-        components.queryItems = params.map { (key, value) in
-            URLQueryItem(name: key, value: value)
+        let headers: HTTPHeaders = ["authorization": Constants.ApiKey.key]
+        AF.request(url, method: .get, headers: headers).responseData { response in
+            switch response.result {
+            case .success(let res):
+                 if let code = response.response?.statusCode{
+                     switch code {
+                     case 200...299:
+                         do {
+                             completion(.success(try JSONDecoder().decode(T.self, from: res)))
+                         } catch let error {
+                             print(String(data: res, encoding: .utf8) ?? "nothing received")
+                             completion(.failure(error))
+                         }
+                     default:
+                      let error = NSError(domain: response.debugDescription, code: code, userInfo: response.response?.allHeaderFields as? [String: Any])
+                         completion(.failure(error))
+                     }
+                 }
+             case .failure(let error):
+                 completion(.failure(error))
+             }
         }
-        var urlRequest = URLRequest(url: components.url!)
-        urlRequest.httpMethod = httpMethod.rawValue
-        urlRequest.addValue("application/json", forHTTPHeaderField: "content-type")
-        urlRequest.addValue(Constants.ApiKey.key, forHTTPHeaderField: "authorization")
-        
-        URLSession.shared.dataTask(with: urlRequest) { data, response, error in
-            let decoder = JSONDecoder()
-            
-            do {
-                if let data = data {
-                    let jsonData = try decoder.decode(T.self, from: data)
-                    completion(.success(jsonData))
-                }
-            }catch {
-                completion(.failure(error))
-            }
-        }.resume()
     }
 }
 
