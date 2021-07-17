@@ -9,6 +9,7 @@ import UIKit
 
 enum Menu: Int {
     case list = 0
+    case total = 1
 }
 
 class HomeViewController: UIViewController {
@@ -64,6 +65,8 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         switch menu {
         case .list:
             viewModel.tappedMenu(menu: .list)
+        case .total:
+            viewModel.tappedMenu(menu: .total)
         default:
             print("none")
         }

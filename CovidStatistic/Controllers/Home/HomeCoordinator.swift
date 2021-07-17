@@ -29,6 +29,23 @@ final class HomeCoordinator: Coordinator {
     func covidStaticList() {
         let covidStatisticListCoordinator = CovidStatisticListCoordinator(navigationController: navigationContoller)
         childCoordinators.append(covidStatisticListCoordinator)
+        covidStatisticListCoordinator.parentCoordinator = self
         covidStatisticListCoordinator.start()
     }
+    
+    func total() {
+        let totalCoordinator = TotalCoordinator(navigationContoller: navigationContoller)
+        childCoordinators.append(totalCoordinator)
+        totalCoordinator.parentCoordinator = self
+        totalCoordinator.start()
+    }
+    
+    func childDidFinish(_ childCoordinator: Coordinator) {
+        if let index = childCoordinators.firstIndex(where: { coordinator -> Bool in
+            return childCoordinator === coordinator
+        }) {
+            childCoordinators.remove(at: index)
+        }
+    }
+    
 }

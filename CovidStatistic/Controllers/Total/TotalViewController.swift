@@ -1,16 +1,16 @@
 //
-//  CovidStatisticListViewController.swift
+//  TotalViewController.swift
 //  CovidStatistic
 //
-//  Created by Batuhan Baran on 12.07.2021.
+//  Created by Batuhan Baran on 17.07.2021.
 //
 
 import UIKit
 
-class CovidStatisticListViewController: UIViewController {
-
-    weak var coordinator: CovidStatisticListCoordinator?
-    var viewModel: CovidStatisticListViewModel!
+class TotalViewController: UIViewController {
+    
+    weak var coordinator: TotalCoordinator?
+    var viewModel: TotalViewModel!
     let tableView = UITableView()
     
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
@@ -18,7 +18,21 @@ class CovidStatisticListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        fetchCovidStatisticList()
+        fetchTotalData()
+    }
+    
+    private func fetchTotalData() {
+        self.activityIndicator.startAnimating()
+        viewModel?.fetchTotalData(completion: { success in
+            if success {
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                    self.configureTableView()
+                    self.activityIndicator.stopAnimating()
+                    self.activityIndicator.hidesWhenStopped = true
+                }
+            }
+        })
     }
     
     private func configureTableView() {
@@ -34,49 +48,38 @@ class CovidStatisticListViewController: UIViewController {
         self.tableView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
         self.tableView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
         
-        self.tableView.register(UINib(nibName: "CovidStatisticListTableViewCell", bundle: nil), forCellReuseIdentifier: CovidStatisticListTableViewCell.identifier)
+        self.tableView.register(UINib(nibName: "TotalTableViewCell", bundle: nil), forCellReuseIdentifier: TotalTableViewCell.identifier)
         
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        
+        tableView.tableFooterView = UIView(frame: .zero)
     }
     
-    private func fetchCovidStatisticList() {
-        self.activityIndicator.startAnimating()
-        viewModel.fetchCovidData { isFinish in
-            if isFinish {
-                DispatchQueue.main.async {
-                    self.activityIndicator.stopAnimating()
-                    self.activityIndicator.hidesWhenStopped = true
-                    self.configureTableView()
-                    self.tableView.reloadData()
-                }
-            }
-        }
-    }
-
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        viewModel.viewDidDisappear()
+        viewModel?.viewDidDisappear()
     }
+
 }
 
-extension CovidStatisticListViewController: UITableViewDataSource, UITableViewDelegate {
+extension TotalViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: CovidStatisticListTableViewCell.identifier, for: indexPath) as? CovidStatisticListTableViewCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: TotalTableViewCell.identifier, for: indexPath) as? TotalTableViewCell else {
             return UITableViewCell()
         }
         
         cell.selectionStyle = .none
-        cell.configure(with: viewModel, indexPath: indexPath)
+        cell.configure(with: viewModel)
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.numberOfItems()
+        return 1
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 300
+        return 205
     }
 }

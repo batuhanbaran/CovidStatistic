@@ -35,8 +35,11 @@ class HomeViewModel {
     }
     
     func tappedMenu(menu: Menu) {
-        if menu == .list {
+        switch menu {
+        case .list:
             coordinator?.covidStaticList()
+        case .total:
+            coordinator?.total()
         }
     }
     

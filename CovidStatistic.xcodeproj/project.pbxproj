@@ -34,6 +34,14 @@
 		D8AE4D2C2698CFD100B8177B /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8AE4D2A2698CFD100B8177B /* HomeViewController.xib */; };
 		D8AE4D3B269B6E4800B8177B /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AE4D3A269B6E4700B8177B /* String+Extension.swift */; };
 		D8AE4D3D269B6E5F00B8177B /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AE4D3C269B6E5F00B8177B /* UIView+Extension.swift */; };
+		D8CDCBBD26A2F284000653C0 /* TotalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CDCBBB26A2F284000653C0 /* TotalViewController.swift */; };
+		D8CDCBBE26A2F284000653C0 /* TotalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8CDCBBC26A2F284000653C0 /* TotalViewController.xib */; };
+		D8CDCBC026A2F2CE000653C0 /* TotalCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CDCBBF26A2F2CE000653C0 /* TotalCoordinator.swift */; };
+		D8CDCBC426A2F5D9000653C0 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CDCBC326A2F5D9000653C0 /* BaseViewModel.swift */; };
+		D8CDCBC726A2F6A4000653C0 /* TotalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CDCBC626A2F6A4000653C0 /* TotalViewModel.swift */; };
+		D8CDCBCA26A2F79B000653C0 /* Total.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CDCBC926A2F79B000653C0 /* Total.swift */; };
+		D8CDCBCE26A2FE2D000653C0 /* TotalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CDCBCC26A2FE2D000653C0 /* TotalTableViewCell.swift */; };
+		D8CDCBCF26A2FE2D000653C0 /* TotalTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8CDCBCD26A2FE2D000653C0 /* TotalTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +94,14 @@
 		D8AE4D3A269B6E4700B8177B /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		D8AE4D3C269B6E5F00B8177B /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		D8AE4D46269B723300B8177B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D8CDCBBB26A2F284000653C0 /* TotalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalViewController.swift; sourceTree = "<group>"; };
+		D8CDCBBC26A2F284000653C0 /* TotalViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TotalViewController.xib; sourceTree = "<group>"; };
+		D8CDCBBF26A2F2CE000653C0 /* TotalCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalCoordinator.swift; sourceTree = "<group>"; };
+		D8CDCBC326A2F5D9000653C0 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		D8CDCBC626A2F6A4000653C0 /* TotalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalViewModel.swift; sourceTree = "<group>"; };
+		D8CDCBC926A2F79B000653C0 /* Total.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Total.swift; sourceTree = "<group>"; };
+		D8CDCBCC26A2FE2D000653C0 /* TotalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalTableViewCell.swift; sourceTree = "<group>"; };
+		D8CDCBCD26A2FE2D000653C0 /* TotalTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TotalTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +196,7 @@
 				D8659C30269CDFEA001D9493 /* View Model */,
 				D8659C2A269CDB8D001D9493 /* Cell */,
 				D86B7ACA269C807F00BB5CA5 /* CovidStatisticListViewController.swift */,
+				D86B7AC3269C7CB100BB5CA5 /* CovidStatisticListCoordinator.swift */,
 				D86B7ACB269C807F00BB5CA5 /* CovidStatisticListViewController.xib */,
 			);
 			path = "Covid Statistic List";
@@ -212,6 +229,7 @@
 				D8AE4D2D269B62F000B8177B /* Coordinator */,
 				D8659C35269CE0DD001D9493 /* Network */,
 				D8AE4D2E269B6BBF00B8177B /* Controllers */,
+				D8CDCBC126A2F5B1000653C0 /* Base */,
 				D8659C3E269CE126001D9493 /* Constant */,
 				D8AE4D33269B6D5600B8177B /* Helpers */,
 				D8AE4D31269B6C0C00B8177B /* SupportingFiles */,
@@ -244,8 +262,6 @@
 			children = (
 				D8AE4D1F2698C25C00B8177B /* Coordinator.swift */,
 				D8AE4D222698C69100B8177B /* AppCoordinator.swift */,
-				D8AE4D252698CF3900B8177B /* HomeCoordinator.swift */,
-				D86B7AC3269C7CB100BB5CA5 /* CovidStatisticListCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -253,6 +269,7 @@
 		D8AE4D2E269B6BBF00B8177B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				D8CDCBBA26A2F23C000653C0 /* Total */,
 				D8AE4D2F269B6BD400B8177B /* Home */,
 				D86B7AC5269C7D8F00BB5CA5 /* Covid Statistic List */,
 			);
@@ -264,6 +281,7 @@
 			children = (
 				D86B7AC0269C794800BB5CA5 /* View Model */,
 				D86B7ABB269C5C4600BB5CA5 /* Cell */,
+				D8AE4D252698CF3900B8177B /* HomeCoordinator.swift */,
 				D8AE4D292698CFD100B8177B /* HomeViewController.swift */,
 				D8AE4D2A2698CFD100B8177B /* HomeViewController.xib */,
 			);
@@ -318,6 +336,60 @@
 				D8AE4D3A269B6E4700B8177B /* String+Extension.swift */,
 			);
 			path = VariableExtensions;
+			sourceTree = "<group>";
+		};
+		D8CDCBBA26A2F23C000653C0 /* Total */ = {
+			isa = PBXGroup;
+			children = (
+				D8CDCBCB26A2FE1B000653C0 /* Cell */,
+				D8CDCBC826A2F789000653C0 /* Model */,
+				D8CDCBC526A2F695000653C0 /* View Model */,
+				D8CDCBBB26A2F284000653C0 /* TotalViewController.swift */,
+				D8CDCBBF26A2F2CE000653C0 /* TotalCoordinator.swift */,
+				D8CDCBBC26A2F284000653C0 /* TotalViewController.xib */,
+			);
+			path = Total;
+			sourceTree = "<group>";
+		};
+		D8CDCBC126A2F5B1000653C0 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				D8CDCBC226A2F5BB000653C0 /* BaseViewModel */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		D8CDCBC226A2F5BB000653C0 /* BaseViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D8CDCBC326A2F5D9000653C0 /* BaseViewModel.swift */,
+			);
+			path = BaseViewModel;
+			sourceTree = "<group>";
+		};
+		D8CDCBC526A2F695000653C0 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				D8CDCBC626A2F6A4000653C0 /* TotalViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		D8CDCBC826A2F789000653C0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D8CDCBC926A2F79B000653C0 /* Total.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D8CDCBCB26A2FE1B000653C0 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				D8CDCBCC26A2FE2D000653C0 /* TotalTableViewCell.swift */,
+				D8CDCBCD26A2FE2D000653C0 /* TotalTableViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -432,8 +504,10 @@
 				D8659C2E269CDBAD001D9493 /* CovidStatisticListTableViewCell.xib in Resources */,
 				D8AE4CFC2698C1B600B8177B /* LaunchScreen.storyboard in Resources */,
 				D8AE4CF92698C1B600B8177B /* Assets.xcassets in Resources */,
+				D8CDCBBE26A2F284000653C0 /* TotalViewController.xib in Resources */,
 				D86B7ABF269C5C5600BB5CA5 /* HomeTableViewCell.xib in Resources */,
 				D86B7ACD269C807F00BB5CA5 /* CovidStatisticListViewController.xib in Resources */,
+				D8CDCBCF26A2FE2D000653C0 /* TotalTableViewCell.xib in Resources */,
 				D8AE4D2C2698CFD100B8177B /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -459,22 +533,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8CDCBCA26A2F79B000653C0 /* Total.swift in Sources */,
 				D8AE4CF72698C1B500B8177B /* CovidStatistic.xcdatamodeld in Sources */,
+				D8CDCBCE26A2FE2D000653C0 /* TotalTableViewCell.swift in Sources */,
 				D8659C34269CE0B6001D9493 /* CovidStatisticListViewModel.swift in Sources */,
 				D8AE4D3B269B6E4800B8177B /* String+Extension.swift in Sources */,
 				D8659C38269CE100001D9493 /* APIPaths.swift in Sources */,
 				D8AE4D3D269B6E5F00B8177B /* UIView+Extension.swift in Sources */,
 				D86B7AC2269C795600BB5CA5 /* HomeViewModel.swift in Sources */,
 				D8AE4D232698C69100B8177B /* AppCoordinator.swift in Sources */,
+				D8CDCBC726A2F6A4000653C0 /* TotalViewModel.swift in Sources */,
 				D86B7ACC269C807F00BB5CA5 /* CovidStatisticListViewController.swift in Sources */,
 				D8659C2D269CDBAD001D9493 /* CovidStatisticListTableViewCell.swift in Sources */,
+				D8CDCBBD26A2F284000653C0 /* TotalViewController.swift in Sources */,
 				D8AE4D202698C25C00B8177B /* Coordinator.swift in Sources */,
 				D8AE4CED2698C1B500B8177B /* AppDelegate.swift in Sources */,
+				D8CDCBC426A2F5D9000653C0 /* BaseViewModel.swift in Sources */,
 				D8659C3D269CE11D001D9493 /* Constant.swift in Sources */,
 				D86B7ABE269C5C5600BB5CA5 /* HomeTableViewCell.swift in Sources */,
 				D8659C32269CE06F001D9493 /* CovidStatisticList.swift in Sources */,
 				D8AE4D2B2698CFD100B8177B /* HomeViewController.swift in Sources */,
 				D8AE4D262698CF3900B8177B /* HomeCoordinator.swift in Sources */,
+				D8CDCBC026A2F2CE000653C0 /* TotalCoordinator.swift in Sources */,
 				D8659C39269CE100001D9493 /* API.swift in Sources */,
 				D86B7AC4269C7CB100BB5CA5 /* CovidStatisticListCoordinator.swift in Sources */,
 			);

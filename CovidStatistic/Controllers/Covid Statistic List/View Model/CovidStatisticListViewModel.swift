@@ -7,8 +7,9 @@
 
 import Foundation
 
-class CovidStatisticListViewModel {
+final class CovidStatisticListViewModel: BaseViewModel {
     var result: [CovidResult]?
+    var coordinator: CovidStatisticListCoordinator?
     
     func fetchCovidData(completion: @escaping (Bool) ->()) {
         API.fetch(endPoint: "corona/countriesData/") { (covidData: Result<CovidData,Error>) in
@@ -24,5 +25,9 @@ class CovidStatisticListViewModel {
     
     func numberOfItems() -> Int {
         return result?.count ?? 0
+    }
+    
+    func viewDidDisappear() {
+        coordinator?.didFinishListing()
     }
 }
