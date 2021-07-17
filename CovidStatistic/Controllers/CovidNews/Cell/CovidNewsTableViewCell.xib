@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="CovidNewsTableViewCell" customModule="CovidStatistic" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="345"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="345"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S3N-Og-b6d">
+                        <rect key="frame" x="8" y="8" width="304" height="329"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XjP-Eb-i7P">
+                                <rect key="frame" x="8" y="62.5" width="288" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="AyG-9P-CyO"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="In the World" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EY0-ka-1Cv">
+                                <rect key="frame" x="8" y="198.5" width="288" height="16.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="In the World" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XDY-te-CB6">
+                                <rect key="frame" x="8" y="299.5" width="75.5" height="21.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21.5" id="iez-fH-tna"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="FXd-6g-7bx">
+                                <rect key="frame" x="196" y="300" width="99.5" height="21.5"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clock" translatesAutoresizingMaskIntoConstraints="NO" id="Fta-2P-7b3">
+                                        <rect key="frame" x="0.0" y="0.0" width="16" height="21.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="16" id="6Ei-0d-GOu"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="In the World" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OWS-lO-z1k">
+                                        <rect key="frame" x="24" y="0.0" width="75.5" height="21.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21.5" id="Jpb-a5-Uoj"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21.5" id="436-vk-8Bb"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="EY0-ka-1Cv" secondAttribute="trailing" constant="8" id="1pl-jy-dQX"/>
+                            <constraint firstAttribute="bottom" secondItem="FXd-6g-7bx" secondAttribute="bottom" constant="7.5" id="3uL-Rt-bSp"/>
+                            <constraint firstAttribute="trailing" secondItem="XjP-Eb-i7P" secondAttribute="trailing" constant="8" id="Ckf-ln-snr"/>
+                            <constraint firstAttribute="bottom" secondItem="XDY-te-CB6" secondAttribute="bottom" constant="8" id="YWg-td-LaL"/>
+                            <constraint firstItem="EY0-ka-1Cv" firstAttribute="leading" secondItem="XjP-Eb-i7P" secondAttribute="leading" id="Z1G-KG-GXA"/>
+                            <constraint firstItem="EY0-ka-1Cv" firstAttribute="top" secondItem="XjP-Eb-i7P" secondAttribute="bottom" constant="8" symbolic="YES" id="acl-fr-FvB"/>
+                            <constraint firstItem="XDY-te-CB6" firstAttribute="leading" secondItem="S3N-Og-b6d" secondAttribute="leading" constant="8" id="bPy-50-39k"/>
+                            <constraint firstAttribute="trailing" secondItem="FXd-6g-7bx" secondAttribute="trailing" constant="8.5" id="sgE-EC-6NB"/>
+                            <constraint firstItem="XjP-Eb-i7P" firstAttribute="leading" secondItem="S3N-Og-b6d" secondAttribute="leading" constant="8" id="yhm-c9-CPW"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="In the World" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3X1-mg-6ls">
+                        <rect key="frame" x="8" y="18" width="304" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="EBX-WH-CUI"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="3X1-mg-6ls" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="18" id="3kl-K0-6DX"/>
+                    <constraint firstItem="3X1-mg-6ls" firstAttribute="trailing" secondItem="S3N-Og-b6d" secondAttribute="trailing" id="9gg-OU-NjR"/>
+                    <constraint firstItem="3X1-mg-6ls" firstAttribute="leading" secondItem="S3N-Og-b6d" secondAttribute="leading" id="M8k-lv-BGZ"/>
+                    <constraint firstAttribute="trailing" secondItem="S3N-Og-b6d" secondAttribute="trailing" constant="8" id="MoA-7l-ztv"/>
+                    <constraint firstItem="XjP-Eb-i7P" firstAttribute="top" secondItem="3X1-mg-6ls" secondAttribute="bottom" constant="12.5" id="PeT-Qo-Otq"/>
+                    <constraint firstItem="3X1-mg-6ls" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="W9V-DG-55g"/>
+                    <constraint firstAttribute="bottom" secondItem="S3N-Og-b6d" secondAttribute="bottom" constant="8" id="Y3h-UJ-SH2"/>
+                    <constraint firstItem="S3N-Og-b6d" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="g1R-A9-aNu"/>
+                    <constraint firstItem="S3N-Og-b6d" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="xah-3a-liA"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="backView" destination="S3N-Og-b6d" id="oLJ-Rl-LyT"/>
+                <outlet property="newsDate" destination="OWS-lO-z1k" id="kmY-qK-gb7"/>
+                <outlet property="newsDescription" destination="EY0-ka-1Cv" id="Xbz-XW-F9L"/>
+                <outlet property="newsImageView" destination="XjP-Eb-i7P" id="NGm-Ke-a5g"/>
+                <outlet property="newsSource" destination="XDY-te-CB6" id="cQL-9n-N1z"/>
+                <outlet property="newsTitle" destination="3X1-mg-6ls" id="iRP-sy-oAD"/>
+            </connections>
+            <point key="canvasLocation" x="60.869565217391312" y="57.924107142857139"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="clock" width="384" height="384"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

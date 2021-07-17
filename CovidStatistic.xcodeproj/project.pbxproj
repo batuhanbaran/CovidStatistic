@@ -21,6 +21,7 @@
 		D86B7AC4269C7CB100BB5CA5 /* CovidStatisticListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86B7AC3269C7CB100BB5CA5 /* CovidStatisticListCoordinator.swift */; };
 		D86B7ACC269C807F00BB5CA5 /* CovidStatisticListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86B7ACA269C807F00BB5CA5 /* CovidStatisticListViewController.swift */; };
 		D86B7ACD269C807F00BB5CA5 /* CovidStatisticListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D86B7ACB269C807F00BB5CA5 /* CovidStatisticListViewController.xib */; };
+		D89DED2626A3450E002D91FC /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89DED2526A3450E002D91FC /* UIImageView+Extension.swift */; };
 		D8AE4CED2698C1B500B8177B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AE4CEC2698C1B500B8177B /* AppDelegate.swift */; };
 		D8AE4CF72698C1B500B8177B /* CovidStatistic.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D8AE4CF52698C1B500B8177B /* CovidStatistic.xcdatamodeld */; };
 		D8AE4CF92698C1B600B8177B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8AE4CF82698C1B600B8177B /* Assets.xcassets */; };
@@ -42,6 +43,14 @@
 		D8CDCBCA26A2F79B000653C0 /* Total.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CDCBC926A2F79B000653C0 /* Total.swift */; };
 		D8CDCBCE26A2FE2D000653C0 /* TotalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CDCBCC26A2FE2D000653C0 /* TotalTableViewCell.swift */; };
 		D8CDCBCF26A2FE2D000653C0 /* TotalTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8CDCBCD26A2FE2D000653C0 /* TotalTableViewCell.xib */; };
+		D8D1F58026A330D60026F68C /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = D8D1F57F26A330D60026F68C /* Kingfisher */; };
+		D8D1F58726A337CB0026F68C /* CovidNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D1F58526A337CB0026F68C /* CovidNewsViewController.swift */; };
+		D8D1F58826A337CB0026F68C /* CovidNewsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8D1F58626A337CB0026F68C /* CovidNewsViewController.xib */; };
+		D8D1F58B26A3383E0026F68C /* CovidNewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D1F58926A3383E0026F68C /* CovidNewsTableViewCell.swift */; };
+		D8D1F58C26A3383E0026F68C /* CovidNewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8D1F58A26A3383E0026F68C /* CovidNewsTableViewCell.xib */; };
+		D8D1F58E26A3385A0026F68C /* CovidNewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D1F58D26A3385A0026F68C /* CovidNewsViewModel.swift */; };
+		D8D1F59026A338680026F68C /* CovidNewsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D1F58F26A338680026F68C /* CovidNewsCoordinator.swift */; };
+		D8D1F59226A33B330026F68C /* CovidNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D1F59126A33B330026F68C /* CovidNews.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +84,7 @@
 		D86B7AC3269C7CB100BB5CA5 /* CovidStatisticListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidStatisticListCoordinator.swift; sourceTree = "<group>"; };
 		D86B7ACA269C807F00BB5CA5 /* CovidStatisticListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidStatisticListViewController.swift; sourceTree = "<group>"; };
 		D86B7ACB269C807F00BB5CA5 /* CovidStatisticListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CovidStatisticListViewController.xib; sourceTree = "<group>"; };
+		D89DED2526A3450E002D91FC /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		D8AE4CE92698C1B500B8177B /* CovidStatistic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CovidStatistic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8AE4CEC2698C1B500B8177B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8AE4CF62698C1B500B8177B /* CovidStatistic.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CovidStatistic.xcdatamodel; sourceTree = "<group>"; };
@@ -102,6 +112,13 @@
 		D8CDCBC926A2F79B000653C0 /* Total.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Total.swift; sourceTree = "<group>"; };
 		D8CDCBCC26A2FE2D000653C0 /* TotalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalTableViewCell.swift; sourceTree = "<group>"; };
 		D8CDCBCD26A2FE2D000653C0 /* TotalTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TotalTableViewCell.xib; sourceTree = "<group>"; };
+		D8D1F58526A337CB0026F68C /* CovidNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidNewsViewController.swift; sourceTree = "<group>"; };
+		D8D1F58626A337CB0026F68C /* CovidNewsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CovidNewsViewController.xib; sourceTree = "<group>"; };
+		D8D1F58926A3383E0026F68C /* CovidNewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidNewsTableViewCell.swift; sourceTree = "<group>"; };
+		D8D1F58A26A3383E0026F68C /* CovidNewsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CovidNewsTableViewCell.xib; sourceTree = "<group>"; };
+		D8D1F58D26A3385A0026F68C /* CovidNewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidNewsViewModel.swift; sourceTree = "<group>"; };
+		D8D1F58F26A338680026F68C /* CovidNewsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidNewsCoordinator.swift; sourceTree = "<group>"; };
+		D8D1F59126A33B330026F68C /* CovidNews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidNews.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +126,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8D1F58026A330D60026F68C /* Kingfisher in Frameworks */,
 				D833F995269F833C005682AA /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -269,9 +287,10 @@
 		D8AE4D2E269B6BBF00B8177B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				D8CDCBBA26A2F23C000653C0 /* Total */,
 				D8AE4D2F269B6BD400B8177B /* Home */,
 				D86B7AC5269C7D8F00BB5CA5 /* Covid Statistic List */,
+				D8CDCBBA26A2F23C000653C0 /* Total */,
+				D8D1F58126A330E60026F68C /* CovidNews */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -326,6 +345,7 @@
 			isa = PBXGroup;
 			children = (
 				D8AE4D3C269B6E5F00B8177B /* UIView+Extension.swift */,
+				D89DED2526A3450E002D91FC /* UIImageView+Extension.swift */,
 			);
 			path = UIExtensions;
 			sourceTree = "<group>";
@@ -392,6 +412,44 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		D8D1F58126A330E60026F68C /* CovidNews */ = {
+			isa = PBXGroup;
+			children = (
+				D8D1F58226A3377A0026F68C /* Model */,
+				D8D1F58326A337820026F68C /* View Model */,
+				D8D1F58426A3378C0026F68C /* Cell */,
+				D8D1F58526A337CB0026F68C /* CovidNewsViewController.swift */,
+				D8D1F58F26A338680026F68C /* CovidNewsCoordinator.swift */,
+				D8D1F58626A337CB0026F68C /* CovidNewsViewController.xib */,
+			);
+			path = CovidNews;
+			sourceTree = "<group>";
+		};
+		D8D1F58226A3377A0026F68C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D8D1F59126A33B330026F68C /* CovidNews.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D8D1F58326A337820026F68C /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				D8D1F58D26A3385A0026F68C /* CovidNewsViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		D8D1F58426A3378C0026F68C /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				D8D1F58926A3383E0026F68C /* CovidNewsTableViewCell.swift */,
+				D8D1F58A26A3383E0026F68C /* CovidNewsTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -410,6 +468,7 @@
 			name = CovidStatistic;
 			packageProductDependencies = (
 				D833F994269F833C005682AA /* Alamofire */,
+				D8D1F57F26A330D60026F68C /* Kingfisher */,
 			);
 			productName = CovidStatistic;
 			productReference = D8AE4CE92698C1B500B8177B /* CovidStatistic.app */;
@@ -484,6 +543,7 @@
 			mainGroup = D8AE4CE02698C1B500B8177B;
 			packageReferences = (
 				D833F993269F833C005682AA /* XCRemoteSwiftPackageReference "Alamofire" */,
+				D8D1F57E26A330D60026F68C /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = D8AE4CEA2698C1B500B8177B /* Products */;
 			projectDirPath = "";
@@ -505,7 +565,9 @@
 				D8AE4CFC2698C1B600B8177B /* LaunchScreen.storyboard in Resources */,
 				D8AE4CF92698C1B600B8177B /* Assets.xcassets in Resources */,
 				D8CDCBBE26A2F284000653C0 /* TotalViewController.xib in Resources */,
+				D8D1F58826A337CB0026F68C /* CovidNewsViewController.xib in Resources */,
 				D86B7ABF269C5C5600BB5CA5 /* HomeTableViewCell.xib in Resources */,
+				D8D1F58C26A3383E0026F68C /* CovidNewsTableViewCell.xib in Resources */,
 				D86B7ACD269C807F00BB5CA5 /* CovidStatisticListViewController.xib in Resources */,
 				D8CDCBCF26A2FE2D000653C0 /* TotalTableViewCell.xib in Resources */,
 				D8AE4D2C2698CFD100B8177B /* HomeViewController.xib in Resources */,
@@ -533,6 +595,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D89DED2626A3450E002D91FC /* UIImageView+Extension.swift in Sources */,
+				D8D1F58B26A3383E0026F68C /* CovidNewsTableViewCell.swift in Sources */,
 				D8CDCBCA26A2F79B000653C0 /* Total.swift in Sources */,
 				D8AE4CF72698C1B500B8177B /* CovidStatistic.xcdatamodeld in Sources */,
 				D8CDCBCE26A2FE2D000653C0 /* TotalTableViewCell.swift in Sources */,
@@ -542,15 +606,19 @@
 				D8AE4D3D269B6E5F00B8177B /* UIView+Extension.swift in Sources */,
 				D86B7AC2269C795600BB5CA5 /* HomeViewModel.swift in Sources */,
 				D8AE4D232698C69100B8177B /* AppCoordinator.swift in Sources */,
+				D8D1F59226A33B330026F68C /* CovidNews.swift in Sources */,
 				D8CDCBC726A2F6A4000653C0 /* TotalViewModel.swift in Sources */,
+				D8D1F59026A338680026F68C /* CovidNewsCoordinator.swift in Sources */,
 				D86B7ACC269C807F00BB5CA5 /* CovidStatisticListViewController.swift in Sources */,
 				D8659C2D269CDBAD001D9493 /* CovidStatisticListTableViewCell.swift in Sources */,
 				D8CDCBBD26A2F284000653C0 /* TotalViewController.swift in Sources */,
 				D8AE4D202698C25C00B8177B /* Coordinator.swift in Sources */,
+				D8D1F58E26A3385A0026F68C /* CovidNewsViewModel.swift in Sources */,
 				D8AE4CED2698C1B500B8177B /* AppDelegate.swift in Sources */,
 				D8CDCBC426A2F5D9000653C0 /* BaseViewModel.swift in Sources */,
 				D8659C3D269CE11D001D9493 /* Constant.swift in Sources */,
 				D86B7ABE269C5C5600BB5CA5 /* HomeTableViewCell.swift in Sources */,
+				D8D1F58726A337CB0026F68C /* CovidNewsViewController.swift in Sources */,
 				D8659C32269CE06F001D9493 /* CovidStatisticList.swift in Sources */,
 				D8AE4D2B2698CFD100B8177B /* HomeViewController.swift in Sources */,
 				D8AE4D262698CF3900B8177B /* HomeCoordinator.swift in Sources */,
@@ -895,6 +963,14 @@
 				minimumVersion = 5.4.3;
 			};
 		};
+		D8D1F57E26A330D60026F68C /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.3.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -902,6 +978,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = D833F993269F833C005682AA /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		D8D1F57F26A330D60026F68C /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D8D1F57E26A330D60026F68C /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 

@@ -40,7 +40,8 @@ class HomeViewModel {
             coordinator?.covidStaticList()
         case .total:
             coordinator?.total()
+        case .covidNews:
+            coordinator?.covidNews()
         }
     }
-    
 }

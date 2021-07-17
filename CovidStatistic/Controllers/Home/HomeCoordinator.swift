@@ -22,7 +22,6 @@ final class HomeCoordinator: Coordinator {
         homeViewController.viewModel = viewModel
         viewModel.coordinator = self
         homeViewController.title = "Covid Statistic"
-        
         navigationContoller.setViewControllers([homeViewController], animated: false)
     }
     
@@ -40,6 +39,13 @@ final class HomeCoordinator: Coordinator {
         totalCoordinator.start()
     }
     
+    func covidNews() {
+        let covidNewCoordinator = CovidNewsCoordinator(navigationController: navigationContoller)
+        childCoordinators.append(covidNewCoordinator)
+        covidNewCoordinator.parentCoordinator = self
+        covidNewCoordinator.start()
+    }
+    
     func childDidFinish(_ childCoordinator: Coordinator) {
         if let index = childCoordinators.firstIndex(where: { coordinator -> Bool in
             return childCoordinator === coordinator
@@ -47,5 +53,4 @@ final class HomeCoordinator: Coordinator {
             childCoordinators.remove(at: index)
         }
     }
-    
 }
